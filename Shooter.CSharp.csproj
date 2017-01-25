@@ -79,11 +79,16 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Interfaces\IHealth.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IMover.cs" />
+    <Compile Include="Assets\Scripts\Systems\Global.cs" />
+    <Compile Include="Assets\Scripts\Systems\Prefabs.cs" />
     <Compile Include="Assets\Scripts\Unit\Health.cs" />
     <Compile Include="Assets\Scripts\Unit\Mover.cs" />
     <Compile Include="Assets\Scripts\Unit\PlayerUnit.cs" />
     <Compile Include="Assets\Scripts\Unit\UnitBase.cs" />
     <Compile Include="Assets\Scripts\Utility\Extensions.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Weapons\WeaponController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

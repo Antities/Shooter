@@ -12,7 +12,7 @@ namespace TAMKShooter.Utility
             where TComponent : Component
         {
             TComponent component = gameObject.GetComponent<TComponent>();
-            if(component = null)
+            if(component == null)
             {
                 component = gameObject.AddComponent<TComponent>();
                 

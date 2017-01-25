@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4803168296961796}
+  - component: {fileID: 114484242858283196}
   m_Layer: 8
   m_Name: Weapon1
   m_TagString: Untagged
@@ -34,6 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4819106471779640}
+  - component: {fileID: 114948709251744392}
   m_Layer: 8
   m_Name: Weapons
   m_TagString: Untagged
@@ -49,6 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4779874176694204}
+  - component: {fileID: 114690354087545938}
   m_Layer: 8
   m_Name: Weapon2
   m_TagString: Untagged
@@ -200,6 +203,18 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 6c11e79470dad4b4bb66b279d2660007, type: 3}
+--- !u!114 &114484242858283196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1220833641888846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c469c3e5057a42e4b83df19452032690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 1
 --- !u!114 &114615136392486370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190e657fd679c1842a9f0ec1954c5737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 8
+  _speed: 16
 --- !u!114 &114641917716801118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,6 +238,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6dd01075659744bba207f06b086f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114690354087545938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683298358015018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c469c3e5057a42e4b83df19452032690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 1
 --- !u!114 &114749314733900634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,3 +262,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
+--- !u!114 &114948709251744392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1419079518466266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f7aad0f410db94596959bbd08bf8c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shootingSpeed: 2
