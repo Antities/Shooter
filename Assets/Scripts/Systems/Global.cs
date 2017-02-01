@@ -21,9 +21,11 @@ namespace TAMKShooter.Systems
         }
 
         [SerializeField]
-        private Prefabs _Prefabs;
-        public Prefabs Prefabs { get { return _Prefabs; }  }
-
+        private Prefabs _prefabs;
+        [SerializeField]
+        private Pools _pools;
+        public Prefabs Prefabs { get { return _prefabs; }  }
+        public Pools Pools {get { return _pools; } }
 
         protected void Awake()
         {
@@ -48,9 +50,15 @@ namespace TAMKShooter.Systems
 
         private void Init()
         {
-            if (_Prefabs == null)
+            DontDestroyOnLoad(gameObject);
+
+            if (_prefabs == null)
             {
-                _Prefabs = GetComponentInChildren<Prefabs>();
+                _prefabs = GetComponentInChildren<Prefabs>();
+            }
+            if(_pools == null)
+            {
+                _pools = GetComponentInChildren<Pools>();
             }
         }
     }

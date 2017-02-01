@@ -18,15 +18,18 @@ namespace TAMKShooter
         [SerializeField] private float _ShootingForce;
         [SerializeField] private int _Damage;
         [SerializeField] private ProjectileType _projectileType;
-        #endregion
 
-        private Rigidbody _rigidbody;
+        #endregion
+        private IShooter _shooter;
+
+        public Rigidbody RigidBody { get; private set; }
+
         public ProjectileType Type { get { return _projectileType; } }
 
         #region Unity messages
         protected virtual void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody>();
+        RigidBody = GetComponent<Rigidbody>();
     }
         protected void OnCollisionEnter(Collision collision)
         {
@@ -38,22 +41,23 @@ namespace TAMKShooter
 
                 //TODO: Instatiate explosive effect ba-boom
                 //TODO: Instatiate sound effects (also boom)
-                Destroy(gameObject);
+                _shooter.ProjectileHit(this);
             }
         }
         protected void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.layer == LayerMask.NameToLayer("Destroyer"))
             {
-                Destroy(gameObject);
+                _shooter.ProjectileHit(this);
             }
         }
         
         #endregion
 
-        public void Shoot(Vector3 direction)
+        public void Shoot(IShooter shooter, Vector3 direction)
     {
-            _rigidbody.AddForce(direction * _ShootingForce, ForceMode.Impulse);
+            _shooter = shooter;
+            RigidBody.AddForce(direction * _ShootingForce, ForceMode.Impulse);
     }
 
         

@@ -133,6 +133,51 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 459d1b0a2f0221541b9b327ee4063717, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &137954724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 137954725}
+  - component: {fileID: 137954726}
+  m_Layer: 0
+  m_Name: ProjectilePoolLaser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &137954725
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137954724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 425876161}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &137954726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137954724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f29f6a388df2e148bbc38c6f82c0635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectAmount: 60
+  _objectPrefab: {fileID: 114926511315132468, guid: bc6c9f5572e85be4a82b5c644033ed81,
+    type: 2}
+  shouldGrow: 1
+  _projectileType: 1
 --- !u!1001 &166436355
 Prefab:
   m_ObjectHideFlags: 0
@@ -216,6 +261,54 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 100, y: 1, z: 100}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &322320059 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4698515696701758, guid: 0a2c7f7e5ca5a3d4799ab20e5bdfd68b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1263962501}
+--- !u!1 &425876160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 425876161}
+  - component: {fileID: 425876162}
+  m_Layer: 0
+  m_Name: Pools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &425876161
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 425876160}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 137954725}
+  m_Father: {fileID: 322320059}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &425876162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 425876160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84d0fd2b66c9c149bb7cea19541d94f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectilePools:
+  - {fileID: 137954726}
 --- !u!1 &830823831
 GameObject:
   m_ObjectHideFlags: 0
